@@ -17,7 +17,7 @@ import {useModal} from '@/hooks/useModalStore';
 
 const formSchema = z.object({
     name: z.string().min(1, { message: 'Server name is required' }),
-    imageUrl: z.string().min(0, { message: 'Server Image is required' }),
+    imgUrl: z.string().min(0, { message: 'Server Image is required' }),
 });
 
 export const CreateServerModal = () => {
@@ -31,7 +31,7 @@ export const CreateServerModal = () => {
         resolver: zodResolver(formSchema),
         defaultValues: {
             name: '',
-            imageUrl: '',
+            imgUrl: '',
         }
     });
 
@@ -72,7 +72,7 @@ export const CreateServerModal = () => {
                                 <div className='flex items-center justify-center text-center'>
                                     <FormField
                                         control={form.control}
-                                        name='imageUrl'
+                                        name='imgUrl'
                                         render={({ field }) => (
                                             <FormItem>
                                                 <FormControl>

@@ -17,7 +17,7 @@ import { useRouter } from 'next/navigation';
 
 const formSchema = z.object({
     name: z.string().min(1, { message: 'Server name is required' }),
-    imageUrl: z.string().min(0, { message: 'Server Image is required' }),
+    imgUrl: z.string().min(0, { message: 'Server Image is required' }),
 });
 
 const InitailModal = () => {
@@ -35,7 +35,7 @@ const InitailModal = () => {
         resolver: zodResolver(formSchema),
         defaultValues: {
             name: '',
-            imageUrl: '',
+            imgUrl: '',
         }
     });
 
@@ -75,7 +75,7 @@ const InitailModal = () => {
                                 <div className='flex items-center justify-center text-center'>
                                     <FormField
                                         control={form.control}
-                                        name='imageUrl'
+                                        name='imgUrl'
                                         render={({ field }) => (
                                             <FormItem>
                                                 <FormControl>
