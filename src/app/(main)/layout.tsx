@@ -1,5 +1,4 @@
 import NavigationSidebar from "@/components/navigation/NavigationSidebar";
-import { ModalProvider } from "@/components/providers/modal-provider";
 
 const MainLayout = async ({
     children

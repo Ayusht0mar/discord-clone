@@ -5,7 +5,7 @@ import { useModal } from "@/hooks/useModalStore";
 import { useState } from "react";
 import { Button } from "../ui/button";
 import axios from "axios";
-import { useParams, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 
 const DeleteChannelModal = () => {
@@ -31,7 +31,7 @@ const DeleteChannelModal = () => {
 
             onClose();
             router.refresh();
-            router.push(`/servers/${server?.id}`)
+            router.push(`/server/${server?.id}`)
         } catch (error) {
             console.log(error);
         } finally {
